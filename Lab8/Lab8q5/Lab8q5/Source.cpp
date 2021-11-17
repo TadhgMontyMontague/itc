@@ -22,6 +22,8 @@ int main()
 
 	cout << "Please enter second number, : ";
 	cin >> secondNum;
+	cout << endl;
+
 
 
 }
