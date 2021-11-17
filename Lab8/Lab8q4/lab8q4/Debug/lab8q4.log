@@ -1,0 +1,3 @@
+﻿  Source.cpp
+G:\Programming\Labs\Labsheet8\itc\Lab8\lab8q4\lab8q4\Source.cpp(64): warning C4715: 'getExamGrade': not all control paths return a value
+  lab8q4.vcxproj -> G:\Programming\Labs\Labsheet8\itc\Lab8\lab8q4\Debug\lab8q4.exe

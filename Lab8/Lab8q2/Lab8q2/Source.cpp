@@ -10,30 +10,30 @@ using namespace std;
 
 
 
-double CmToInches(double t_cm);
+double cmToInches(double t_cm);
 
 
 
 int main()
 {
-	double CmIn = 0.0;
-	double Inch = 0.0;
+	double cmIn = 0.0;
+	double inch = 0.0;
 
 	cout << "Please enter value in Centimeters, : ";
-	cin >> CmIn;
+	cin >> cmIn;
 
-	Inch = CmToInches(CmIn); //Calls Converter.
+	inch = cmToInches(cmIn); //Calls Converter.
 
-	cout << "Inches = " << Inch; //Displays Inches
+	cout << "Inches = " << inch; //Displays Inches
 
 	system("pause");
 	return 0;
 }
 
-double CmToInches(double t_cm)
+double cmToInches(double t_cm)
 {
 	const float cm2in = .394;
 
-	double Inch = t_cm * cm2in;
-	return Inch;
+	double inch = t_cm * cm2in;
+	return inch;
 }
