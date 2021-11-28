@@ -2,69 +2,123 @@
 // c00271105@itcarlow.ie
 // Labsheet8 
 // Q6 - Card Dealer
-// main + 4 functions (1 for each suite)
+// main + 2 functions (Suit & Face)
 // estimated time	- 30min
-// recorded time	- 
+// recorded time	- 40min (A lot of typing)
 
 #include<iostream>
 #include<string>
-#include<cmath>
+#include<time.h>
+#include<random>
+
 
 using namespace std;
 
-string Suite(int t_suiteChoice);
-string Face(string t_CardSuite);
+string Suit(int t_num);
+string Face(int t_Randy);
+
 
 int main()
 {
+	srand(static_cast<unsigned>(time(nullptr)));
+
 	int input = 0;
-	string cardSuite = "";
+	string cardSuit = "";
 	string cardFace = "";
 
-	cout << "Input a number between 1- 4";
-	cin >> input;
+	cardSuit = Suit(4);
 
-	if(input >= 1 && input <= 4)
-	{cardSuite = Suite(input);
+	cardFace = Face(13);
 
-	cardFace = Face(cardSuite);
+	cout << cardSuit << endl;
+	cout << cardFace << endl;
 
-	cout << cardFace << " of " << cardSuite;
-	}
-	else
-	{
-		cout << "ERROR! Yous is a dumbass, choose from (1,2,3,4) Start Again.";
-	}
 	system("Pause");
 	return 0;
 }
 
-string Suite(int t_suiteChoice)
+string Suit(int t_num)
 {
-	int num = t_suiteChoice;
 	string suite = "";
-
-	if (num == 1)
+	int suiteNo = 0;
+	suiteNo = (std::rand() % t_num) + 1;
+	if(suiteNo == 1)
 	{
 		suite = "CLUBS";
 	}
-	else if (num == 2)
+	else if (suiteNo == 2)
 	{
 		suite = "DIAMONDS";
 	}
-	else if (num == 3)
+	else if (suiteNo == 3)
 	{
 		suite = "HEARTS";
 	}
-	else if (num == 4)
+	else if (suiteNo == 4)
 	{
 		suite = "SPADES";
 	}
-
 	return suite;
 }
 
-string Face(string t_CardSuite)
+string Face(int t_Randy)
 {
-	
+	int FaceNo = 0;
+	FaceNo = (std::rand() % t_Randy) + 1;
+	string answer = "";
+
+	if (FaceNo == 1)
+	{
+		answer = "ACE";
+	}
+	else if (FaceNo == 2)
+	{
+		answer = "2";
+	}
+	else if (FaceNo == 3)
+	{
+		answer = "3";
+	}
+	else if (FaceNo == 4)
+	{
+		answer = "4";
+	}
+	else if (FaceNo == 5)
+	{
+		answer = "5";
+	}
+	else if (FaceNo == 6)
+	{
+		answer = "6";
+	}
+	else if (FaceNo == 7)
+	{
+		answer = "7";
+	}
+	else if (FaceNo == 8)
+	{
+		answer = "8";
+	}
+	else if (FaceNo == 9)
+	{
+		answer = "9";
+	}
+	else if (FaceNo == 10)
+	{
+		answer = "10";
+	}
+	else if (FaceNo == 11)
+	{
+		answer = "JACK";
+	}
+	else if (FaceNo == 12)
+	{
+		answer = "QUEEN";
+	}
+	else if (FaceNo == 13)
+	{
+		answer = "KING";
+	}
+
+	return answer;
 }
